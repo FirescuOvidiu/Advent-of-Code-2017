@@ -12,26 +12,31 @@ int main()
 
 	while (in >> c)
 	{
-		if ((c == '<') && (openGarbage == false))
+		if (!openGarbage)
 		{
-			openGarbage = true;
-			continue;
+			switch (c)
+			{
+			case '<':
+				openGarbage = true;
+				break;
+			}
 		}
+		else
+		{
+			switch (c)
+			{
+			case '>':
+				openGarbage = false;
+				break;
 
-		if (c == '>')
-		{
-			openGarbage = false;
-			continue;
-		}
-		if (c == '!')
-		{
-			in >> c;
-			continue;
-		}
+			case '!':
+				in >> c;
+				break;
 
-		if (openGarbage == true)
-		{
-			count++;
+			default:
+				count++;
+				break;
+			}
 		}
 	}
 

@@ -12,34 +12,35 @@ int main()
 
 	while (in >> c)
 	{
-		if ((c == '{') && (openGarbage == false))
+		if (!openGarbage)
 		{
-			addUp++;	
-			continue;
-		}
+			switch (c)
+			{
+			case '{':
+				addUp++;
+				break;
 
-		if ((c == '}') && (openGarbage == false))
-		{
-			score += addUp;
-			addUp--;
-			continue;
-		}
+			case '}':
+				score += addUp--;
+				break;
 
-		if (c == '<')
-		{
-			openGarbage = true;
-			continue;
+			case '<':
+				openGarbage = true;
+				break;
+			}
 		}
-
-		if (c == '>')
+		else
 		{
-			openGarbage = false;
-			continue;
-		}
+			switch (c)
+			{
+			case '>':
+				openGarbage = false;
+				break;
 
-		if (c == '!')
-		{
-			in >> c;
+			case '!':
+				in >> c;
+				break;
+			}
 		}
 	}
 
