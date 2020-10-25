@@ -17,3 +17,4 @@
 #include <math.h>
 #include <stack> 
 #include <bitset>
+#include <numeric>

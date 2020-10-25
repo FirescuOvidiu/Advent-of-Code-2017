@@ -1,5 +1,4 @@
 #include "../../AOCHeaders/stdafx.h"
-#include <numeric>
 
 
 struct Program
