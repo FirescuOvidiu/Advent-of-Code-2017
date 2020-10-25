@@ -18,3 +18,4 @@
 #include <stack> 
 #include <bitset>
 #include <numeric>
+#include <functional>
