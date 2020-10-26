@@ -19,3 +19,4 @@
 #include <bitset>
 #include <numeric>
 #include <functional>
+#include <array>
