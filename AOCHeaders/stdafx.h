@@ -20,3 +20,4 @@
 #include <numeric>
 #include <functional>
 #include <array>
+#include <optional>
